@@ -103,3 +103,13 @@ FPCREATEINSTANCEGL* CFFGLPluginInfo::GetFactoryMethod() const
 {
 	return m_pCreateInstance;
 }
+
+#if defined(FFGL_The78ester)
+
+void CFFGLPluginInfo::ModifyPluginName(char const* pchPluginName)
+{
+	strncpy(m_PluginInfo.PluginName, pchPluginName, 15);
+	m_PluginInfo.PluginName[15] = '\0';
+}
+
+#endif

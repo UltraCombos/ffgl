@@ -138,6 +138,11 @@ public:
 	/// \return		A pointer to the factory method of the plugin subclass.
 	FPCREATEINSTANCEGL* GetFactoryMethod() const;
 
+#if defined(FFGL_The78ester)
+	void ModifyPluginName(char const* pchPluginName);
+
+#endif
+
 private:
 	
 	// Structures containing information about the plugin
